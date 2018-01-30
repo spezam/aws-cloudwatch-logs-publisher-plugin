@@ -27,5 +27,5 @@ THE SOFTWARE.
   This view is used to render the installed plugins page.
 -->
 <div>
-  Publishes build logs to <a href="https://aws.amazon.com/about-aws/whats-new/2014/07/10/introducing-amazon-cloudwatch-logs/">Amazon CloudWatch Logs</a>.
+  Publishes build logs to <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html">Amazon CloudWatch Logs</a>.
 </div>
