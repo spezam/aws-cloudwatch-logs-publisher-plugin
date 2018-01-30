@@ -51,18 +51,13 @@ public final class AWSLogsConfig extends GlobalConfiguration {
      * shut down
      */
     public static AWSLogsConfig get() {
-
         Jenkins jenkins = Jenkins.getInstance();
-
         if (jenkins == null) {
             return null;
         }
 
-        AWSLogsConfig config = jenkins
-                .getDescriptorByType(AWSLogsConfig.class);
-
+        AWSLogsConfig config = jenkins.getDescriptorByType(AWSLogsConfig.class);
         return config;
-
     }
 
     @CheckForNull
@@ -118,8 +113,7 @@ public final class AWSLogsConfig extends GlobalConfiguration {
      * {@inheritDoc}
      */
     @Override
-    public boolean configure(StaplerRequest req, JSONObject json)
-            throws Descriptor.FormException {
+    public boolean configure(StaplerRequest req, JSONObject json) throws Descriptor.FormException {
         req.bindJSON(this, json);
         save();
         return true;
