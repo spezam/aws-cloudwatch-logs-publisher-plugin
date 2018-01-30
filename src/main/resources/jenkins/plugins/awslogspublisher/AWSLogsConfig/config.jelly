@@ -23,18 +23,18 @@ THE SOFTWARE.
 -->
 
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form">
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
   <f:section title="${%AWS CloudWatch Logs Publisher}">
-    <f:entry title="${%AWS Access Key ID}" field="awsAccessKeyId">
+    <f:entry title="${%AWS Access Key ID}" help="/plugin/aws-cloudwatch-logs-publisher/help-accesskey.html"  field="awsAccessKeyId">
       <f:textbox/>
     </f:entry>
-    <f:entry title="${%AWS Secret Key}" field="awsSecretKey">
+    <f:entry title="${%AWS Secret Key}" help="/plugin/aws-cloudwatch-logs-publisher/help-secretkey.html">
+      <f:password field="awsSecretKey"/>
+    </f:entry>
+    <f:entry title="${%AWS Region}" help="/plugin/aws-cloudwatch-logs-publisher/help-region.html" field="awsRegion">
       <f:textbox/>
     </f:entry>
-    <f:entry title="${%AWS Region}" field="awsRegion">
-      <f:textbox/>
-    </f:entry>
-    <f:entry title="${%Log group name}" field="logGroupName">
+    <f:entry title="${%Log group name}" help="/plugin/aws-cloudwatch-logs-publisher/help-loggroupname.html" field="logGroupName">
       <f:textbox/>
     </f:entry>
   </f:section>
